@@ -2,12 +2,12 @@ import React from 'react'
 import { SuperContext } from '../App'
 
 const SuperText = React.forwardRef((props, ref) => (
-  <p ref={ref}>
+  <div ref={ref}>
     {props.children}
     <SuperContext.Consumer>
       {ctx => <p>{ctx}</p>}
     </SuperContext.Consumer>
-  </p>
+  </div>
 ))
 
 export default SuperText
